@@ -104,6 +104,17 @@ describe('CoinGecko', function () {
             shared.shouldBeAValidRequest();
         });
 
+        describe('fetchTickers', function () {
+            beforeEach(function (done) {
+                this.CoinGeckoClient.coins.fetchTickers('bitcoin').then((data) => {
+                    this.data = data;
+                    done();
+                });
+            });
+
+            shared.shouldBeAValidRequest();
+        });
+
         describe('fetchHistory', function () {
             beforeEach(function (done) {
                 this.CoinGeckoClient.coins.fetchHistory('bitcoin', {
