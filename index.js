@@ -1,3 +1,1 @@
-module.exports = exports = {
-    CoinGecko: require('./lib/CoinGecko'),
-};
+module.exports = exports = require('./lib/CoinGecko');
