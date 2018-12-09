@@ -283,4 +283,31 @@ describe('CoinGecko', function () {
         });
     });
 
+    describe('simple', function () {
+        describe('price', function () {
+            beforeEach(function (done) {
+                this.CoinGeckoClient.simple.price({
+                    vs_currencies: 'usd',
+                    ids: ['bitcoin', 'ethereum', 'ripple'],
+                }).then((data) => {
+                    this.data = data;
+                    done();
+                });
+            });
+
+            shared.shouldBeAValidRequest();
+        });
+        
+        describe('supportedVsCurrencies', function () {
+            beforeEach(function (done) {
+                this.CoinGeckoClient.simple.supportedVsCurrencies().then((data) => {
+                    this.data = data;
+                    done();
+                });
+            });
+
+            shared.shouldBeAValidRequest();
+        });
+    });
+
 });
