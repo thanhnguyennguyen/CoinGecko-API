@@ -435,6 +435,43 @@ Usage Example:
 let data = await CoinGeckoClient.exchangeRates.all();
 ```
 
+___
+### • Simple
+Calls related to simple endpoints.
+
+
+#### `simple.price()`
+Get the current price of any cryptocurrencies in any other supported currencies that you need.
+
+Official documentation: https://www.coingecko.com/api/docs/v3#/simple/get_simple_price
+
+Params:
+
+- `params`: `Object` - Parameters to pass through to the request
+- `params.ids`: `Array|String` - (Required) A single id or a list of coin ids to filter if you want specific results. Use `coins.list()` for a list of coin ids.
+- `params.vs_currencies`: `Array|String` - [default: `usd`] - A single id or a list of ids. Use `simple.supportedVsCurrencies()` for a list of vsCurrency ids.
+- `params.include_24hr_vol`: `Boolean` - [default: `false`] - To include 24hr volume.
+- `params.include_last_updated_at`: `Boolean` - [default: `false`] - To include last_updated_at of price.
+
+Usage Example:
+```javascript
+let data = await CoinGeckoClient.simple.price({
+    ids: ['bitcoin', 'ethereum'],
+    vs_currencies: ['eur', 'usd'],
+});
+```
+
+___
+#### `simple.supportedVsCurrencies()`
+Get list of supported vs/comparisons currencies.
+
+Official documentation: https://www.coingecko.com/api/docs/v3#/simple/get_simple_supported_vs_currencies
+
+Usage Example:
+```javascript
+let data = await CoinGeckoClient.simple.supportedVsCurrencies();
+```
+
 ## • Say Hi
 
 Find me on Gab: [@markmiscavage](https://gab.com/markmiscavage).
