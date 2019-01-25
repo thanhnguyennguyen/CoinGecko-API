@@ -183,6 +183,17 @@ describe('CoinGecko', function () {
             shared.shouldBeAValidRequest();
         });
 
+        describe('list', function () {
+            beforeEach(function (done) {
+                this.CoinGeckoClient.exchanges.list().then((data) => {
+                    this.data = data;
+                    done();
+                });
+            });
+
+            shared.shouldBeAValidRequest();
+        });
+
         describe('fetch', function () {
             beforeEach(function (done) {
                 this.CoinGeckoClient.exchanges.fetch('binance').then((data) => {
