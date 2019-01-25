@@ -78,8 +78,6 @@ describe('Utilities', function () {
 
     describe('isDate', function () {
         it('should return false if value is string', function (done) {
-            var x = Utils.isDate(VAR_TYPES.STRING_EMPTY);
-            console.log("x:", x);
             Utils.isDate(VAR_TYPES.STRING_EMPTY).should.be.false;
             Utils.isDate(VAR_TYPES.STRING).should.be.false;
 
