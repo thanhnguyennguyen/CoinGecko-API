@@ -284,6 +284,24 @@ Usage Example:
 let data = await CoinGeckoClient.coins.fetchStatusUpdates('bitcoin');
 ```
 
+___
+#### `coins.fetchCoinContractInfo()`
+Get coin info from contract address.
+
+Official documentation: https://www.coingecko.com/api/docs/v3#/coins/get_coins__id__contract__contract_address_
+
+Params:
+
+- `contractAddress`: `String` - (Required) Token’s contract address
+- `assetPlatform`: `String` [default: `ethereum`] -  Asset platform (only `ethereum` is supported at this moment).
+
+Usage Example:
+```javascript
+// 0x contract address (as a test)
+let zrx = '0xe41d2489571d322189246dafa5ebde1f4699f498';
+let data = await CoinGeckoClient.coins.fetchCoinContractInfo(zrx);
+```
+
 
 ___
 ### • Exchanges
@@ -298,6 +316,17 @@ Official documentation: https://www.coingecko.com/api/docs/v3#/exchanges_(beta)/
 Usage Example:
 ```javascript
 let data = await CoinGeckoClient.exchanges.all();
+```
+
+___
+#### `exchanges.list()`
+List all supported markets id and name (no pagination required).
+
+Official documentation: https://www.coingecko.com/api/docs/v3#/exchanges_(beta)/get_exchanges_list
+
+Usage Example:
+```javascript
+let data = await CoinGeckoClient.exchanges.list();
 ```
 
 ___
