@@ -222,6 +222,7 @@ Params:
 - `coinId`: `String` - (Required) The coin id (can be obtained from `coins.list()`) eg. `bitcoin`
 - `params`: `Object` - Parameters to pass through to the request
 - `params.page`: `Number` - Page through results
+- `params.exchange_ids`: `Array|String` - Filter tickers by exchange_ids (can be obtained from `exchanges.list()`) eg. `binance`
 
 Usage Example:
 ```javascript
@@ -355,6 +356,7 @@ Params:
 - `exchangeId`: `String` - (Required) The exchange id (can be obtained from `exchanges.all()`) eg. `binance`
 - `params`: `Object` - Parameters to pass through to the request
 - `params.page`: `Number` - Page through results
+- `params.coin_ids`: `Array|String` - Filter tickers by coin_ids (can be obtained from `coins.list()`) eg. `bitcoin`
 
 Usage Example:
 ```javascript
