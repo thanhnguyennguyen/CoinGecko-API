@@ -1,6 +1,6 @@
 # CoinGecko API Client for Node.js
 
-<span class="badge-travisci"><a href="http://travis-ci.org/miscavage/coingecko-api" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/miscavage/coingecko-api/master.svg" alt="Travis CI Build Status" /></a></span>
+<span class="badge-travisci"><a href="http://travis-ci.org/miscavage/CoinGecko-API" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/miscavage/CoinGecko-API/master.svg" alt="Travis CI Build Status" /></a></span>
 <span class="badge-npmversion"><a href="https://npmjs.org/package/coingecko-api" title="View this project on NPM"><img src="https://img.shields.io/npm/v/coingecko-api.svg" alt="NPM version"/></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.org/package/coingecko-api" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/coingecko-api.svg" alt="NPM downloads" /></a></span>
 <span class="badge-daviddm"><a href="https://david-dm.org/miscavage/coingecko-api" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/miscavage/coingecko-api.svg" alt="Dependency Status" /></a></span>
