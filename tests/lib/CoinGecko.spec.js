@@ -331,6 +331,21 @@ describe('CoinGecko', function () {
 
             shared.shouldBeAValidRequest();
         });
+
+        describe('fetchTokenPrice', function () {
+            beforeEach(function (done) {
+                var zrx = '0xe41d2489571d322189246dafa5ebde1f4699f498';
+                this.CoinGeckoClient.simple.fetchTokenPrice({
+                    contract_addresses: zrx,
+                    vs_currencies: 'usd',
+                }).then((data) => {
+                    this.data = data;
+                    done();
+                });
+            });
+
+            shared.shouldBeAValidRequest();
+        });
     });
 
 });

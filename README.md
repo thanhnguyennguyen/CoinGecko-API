@@ -509,6 +509,34 @@ Usage Example:
 let data = await CoinGeckoClient.simple.supportedVsCurrencies();
 ```
 
+___
+#### `simple.fetchTokenPrice()`
+Get current price of tokens (using contract addresses) for a given platform in any other currency that you need.
+
+Official documentation: https://www.coingecko.com/en/api#operations-simple-get_simple_token_price__id_
+
+Params:
+
+- `params`: `Object` - Parameters to pass through to the request
+- `assetPlatform`: `String` - [default: `ethereum`] - (Required) Asset platform (only ethereum is supported at this moment)
+- `params.contract_addresses`: `String|Array` - (Required) Token’s contract address
+- `params.vs_currencies`: `String|Array` - (Required) vs_currency of coins. Use `simple.supportedVsCurrencies()` for a list of vsCurrency ids.
+- `params.include_market_cap`: `Boolean` - [default: `false`] - Include market cap in results or not
+- `params.include_24hr_vol`: `Boolean` - [default: `false`] - Include 24hr volume in results or not
+- `params.include_24hr_change`: `Boolean` - [default: `false`] - Include 24hr change in results or not
+- `params.include_last_updated_at`: `Boolean` - [default: `false`] - Include last updated date in results or not
+
+
+Usage Example:
+```javascript
+// 0x contract address (as a test)
+var zrx = '0xe41d2489571d322189246dafa5ebde1f4699f498';
+let data = await CoinGeckoClient.simple.fetchTokenPrice({
+  contract_addresses: zrx,
+  vs_currencies: 'usd',
+});
+```
+
 ## • Say Hi
 
 Find me on Gab: [@markmiscavage](https://gab.com/markmiscavage).
