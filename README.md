@@ -10,7 +10,7 @@ A Node.js wrapper for the CoinGecko API with no dependencies.
 
 ## • Installation
 
-Latest version: 1.0.5
+Latest version: 1.0.6
 
 `npm install coingecko-api`
 
