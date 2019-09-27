@@ -55,6 +55,7 @@ Order results in specific calls by using one of the following values.
 `PRICE_DESC` | `CoinGecko.ORDER.PRICE_DESC` | Order results by price (descending)
 `HOUR_24_ASC` | `CoinGecko.ORDER.HOUR_24_ASC` | Order results by 24 hour change (ascending)
 `HOUR_24_DESC` | `CoinGecko.ORDER.HOUR_24_DESC` | Order results by 24 hour change (descending)
+`TRUST_SCORE_DESC` | `CoinGecko.ORDER.TRUST_SCORE_DESC` | Order results by CoinGecko's trust scoring system (descending)
 
 ___
 #### • `CoinGecko.STATUS_UPDATE_CATEGORY`
