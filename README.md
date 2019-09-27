@@ -391,6 +391,25 @@ let data = await CoinGeckoClient.exchanges.fetchStatusUpdates('binance');
 ```
 
 ___
+#### `exchanges.fetchVolumeChart()`
+Get volume chart data for a given exchange, returned in BTC
+
+Official documentation: https://www.coingecko.com/en/api#operations-exchanges%20(beta)-get_exchanges__id__volume_chart
+
+Params:
+
+- `exchangeId`: `String` - (Required) The exchange id (can be obtained from `exchanges.all()`) eg. `binance`
+- `params`: `Object` - Parameters to pass through to the request
+- `params.days`: `Number` - Data up to number of days ago (eg. 1, 14, 30)
+
+Usage Example:
+```javascript
+let data = await CoinGeckoClient.exchanges.fetchVolumeChart('binance', {
+  days: 1,
+});
+```
+
+___
 ### • Status Updates
 Calls related to status updates.
 

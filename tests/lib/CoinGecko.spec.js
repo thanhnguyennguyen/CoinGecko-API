@@ -231,6 +231,19 @@ describe('CoinGecko', function () {
 
             shared.shouldBeAValidRequest();
         });
+
+      describe('fetchVolumeChart', function () {
+        beforeEach(function (done) {
+          this.CoinGeckoClient.exchanges.fetchVolumeChart('binance', {
+            days: 1,
+          }).then((data) => {
+            this.data = data;
+            done();
+          });
+        });
+
+        shared.shouldBeAValidRequest();
+      });
     });
 
     describe('statusUpdates', function () {
