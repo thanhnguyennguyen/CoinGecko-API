@@ -31,6 +31,5 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.2.0"
-  },
-"publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
